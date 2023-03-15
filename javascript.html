@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>mern-internship-js-assignments</h1>
+    <ol>
+        <li>
+            Check if a number is odd or even in JavaScript.
+        </li>
+        <li>Check if input variable is a number or not</li>
+        <li>Find the largest of three number</li>
+        <li>Check if a triangle is equilateral, scalene, or isosceles</li>
+        <li>Find check if a year is leap year or not</li>
+       
+        <li>Find the grade for input marks Function findGrade() to find the grade of the student based on the input marks.
+
+            -> Print “S grade” if marks is between 90 and 100. -> Print “A grade” if marks is between 80 and 90. -> Print “B grade” if marks is between 70 and 80. -> Print “C grade” if marks is between 60 and 70. -> Print “D grade” if marks is between 50 and 60. -> Print “E grade” if marks is between 40 and 50. -> Print “Student has failed” if marks is between 0 and 40. -> Else print “Invalid marks”. 7.Find number of days in a given month -> If month is outside the range of 1 and 12 print “Invalid month”. -> If month is equal to 2 ie, February print “29 days” if leap year else print “28 days” . -> Else if month is equal to 4, 6, 9 or 11 print “30 days”. -> Else print “31 days”.</li>
+    </ol>
+    <script>
+        var a=5;
+        if(a%2==0)
+        {
+            console.log("even");
+        }
+        else{
+            console.log("odd");
+        }
+
+        var a=100;
+        if(typeof a =='number')
+        {
+            console.log(a+"is a number </br>");
+        }
+        else 
+        {
+            console.log(a+"is not a number </br>");
+        }
+
+        var a=34;
+        var b=12;
+        var c=22;
+        if(a>b && a>c)
+        {
+            console.log(a+"is largest");
+        }
+        else if(b>a && b>c)
+        {
+            console.log(b+" is largest");
+        }
+        else{
+            console.log(c+" is largest");
+        }
+
+        var s1=3;
+        var s2=1;
+        var s3=5;
+
+        let valid = ((s1+s2)>s3)&&((s2+s3)>s1)&&((s3+s1)>s2);
+
+        if(valid)
+        {
+            console.log("valid triangle");
+        }
+        else{
+            console.log("not valid");
+        }
+
+        if(s1==s2 && s2==s3)
+        {
+            console.log("equilateral triangle");
+        }
+        else if(s1==s2 || s2==s3 || s3==s1)
+        {
+            console.log("isosceles");
+        }
+        else{
+            console.log("Scalene");
+        }
+
+        var year=2016;
+        if(year %400 == 0 && year != 100 || year %4==0 )
+        {
+            console.log("leap year");
+        }
+        else{console.log("not leap year");
+    }
+
+    function findgrade(name,marks)
+    {
+        if(marks >= 90 && marks <= 100)
+        {
+            console.log(name + "recieved S grade");
+        }
+        
+        else if(marks >= 80 && marks <= 90)
+        {
+            console.log(name + "recieved A grade");
+        }
+        else if(marks >= 70 && marks <= 80)
+        {
+            console.log(name + "recieved B grade");
+        }
+        else if(marks >= 60 && marks <= 70)
+        {
+            console.log(name + "recieved C grade");
+        }
+        else if(marks >= 50 && marks <= 60)
+        {
+            console.log(name + "recieved D grade");
+        }
+        else if(marks >= 40 && marks <= 50)
+        {
+            console.log(name + "recieved E grade");
+        }
+        else if(marks >= 0 && marks <= 40)
+        {
+            console.log(name + "failed");
+        }
+        else
+        {
+            console.log(name+ "invalid marks");
+        }
+    }
+    findgrade("a",91)
+    findgrade("b",85)
+    findgrade("c",73)
+    findgrade("d",53)
+    findgrade("e",45)
+    findgrade("f",20)
+    findgrade(120)
+    </script>
+</body>
+</html>
